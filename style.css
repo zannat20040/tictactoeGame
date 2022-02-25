@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    text-align: center;
+    background-color: #0abde3;
+    position: relative;
+}
+
+/* GAME BODY */
+
+.gamebody{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26%;
+}
+.showgamebody{
+    visibility: visible!important;
+    opacity: 1!important;
+    transition: 2s;
+}
+
+.inputbox{
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 70px;
+    background-color: white;
+    color: white;
+    transition: .5s;
+    outline: 0;
+    border: 0;
+    
+}
+
+/* UPPER TEXT */
+
+.uppertext{
+    margin: 50px 0;
+}
+h1{
+    color: white;
+    text-transform: uppercase;
+}
+h1:nth-child(2){
+    background-color: white;
+    color: #0abde3;
+    padding: 10px;
+    width: 270px;
+    margin: auto;    
+}
+
+/* FRONT SECTION */
+
+.turntext{
+    color: white;
+    font-size: 25px;
+    position: relative;
+    top: 100%;
+    
+    visibility: visible;
+    opacity: 1;
+}
+.hideturntext{
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+.turntext h3{
+    display: inline-block;
+    font-weight: 600;
+    margin: 30px 0;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+
+/* PLAYER CHOOSE SECTION  */
+
+.player input{
+    margin-bottom: 20px;
+    background-color: #0abde3;
+    
+}
+.player input[type='radio']:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    content: '';
+    top: -2px;
+    left: -1px;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    visibility: visible;
+    position: relative;
+    left: 0px;
+    border: 2px solid transparent;
+
+}
+.player input[type='radio']:checked:after {
+    content: '';
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #0f829c;
+    visibility: visible;
+    border: 2px solid white;
+}
+label{
+    margin-left: 20px;
+    cursor: pointer;
+}
+/* LX/O CHOOSE */
+
+.turnlabel{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    color: #0abde3;
+    line-height: 35px;
+    border-radius: 10px;
+}
+.turnlabel:hover{
+    transition: .5s;
+    background-color: #1e89a1;
+    color: white;
+}
+.turn input{
+    display: none;
+}
+
+/* SUBMIT SECTION  */
+
+button[type = 'submit'],
+.result button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    display: inline-block;
+    background-color: #1e89a1;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+}
+button[type = 'submit']:hover,
+.result button:hover{
+    transition: .5s;
+    color: #1e89a1;
+    background-color: white;
+}
+
+/* RESULT SECTION */
+.result{
+    position: relative;
+}
+.result p{
+    width: 250px;
+    background: white;
+    padding: 8px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #0abde3;
+    position: absolute;
+    top: -600px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.result button{
+    cursor: pointer;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -110px;
+    visibility: hidden;
+    opacity: 0;
+}
+.resultshow{
+    top: -177px!important;
+    visibility: visible!important;
+    opacity: 1!important;
+    transition: 1s;
+}
